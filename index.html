@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRIST THE KING'S GLORIOUS CHURCH - Welcome Home</title>
+    <link rel="icon" href="./favicon_io (5)/favicon.ico">
+    <!-- Bootstrap 3 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25"
+  }
+}
+</script>
+<style>
+    /* Handle user inline styles in dark mode */
+body.dark-mode [style*="color:#222"],
+body.dark-mode [style*="color: #222"],
+body.dark-mode [style*="color:#222222"],
+body.dark-mode [style*="color: #222222"] {
+    color: #ffffff !important;
+}
+body.dark-mode [style*="color:#333"],
+body.dark-mode [style*="color: #333"],
+body.dark-mode [style*="color:#333333"],
+body.dark-mode [style*="color: #333333"] {
+    color: #f1f5f9 !important;
+}
+body.dark-mode [style*="color:#666"],
+body.dark-mode [style*="color: #666"],
+body.dark-mode [style*="color:#666666"],
+body.dark-mode [style*="color: #666666"],
+body.dark-mode [style*="color:#777"],
+body.dark-mode [style*="color: #777"],
+body.dark-mode [style*="color:#777777"],
+body.dark-mode [style*="color: #777777"] {
+    color: #cbd5e1 !important;
+}
+</style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top transition">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand font-serif" href="index.html">
+                    <span class="brand-icon"><img src="./Assets/ckgc logo.png" alt="ckgc" height="60px" width="70px"></span>CHRIST THE KING'S GLORIOUS CHURCH
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                   <li><a href="daily-devotion.html">Bible Study</a></li>
+                       <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html"></i> Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="give.html" class="btn btn-primary navbar-btn btn-sm text-white">Give</a></li>
+                    <li>
+                        <button id="theme-toggle" class="btn btn-link navbar-btn">
+                            <i class="fa fa-moon-o"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section" style="background-image: url('./pg-headers/church\ background-image.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row"> 
+                <div class="col-md-8 col-md-offset-2 text-center hero-content fade-in-up">
+                    <h1 class="font-serif">CHRIST THE KING'S GLORIOUS CHURCH</h1>
+                    <p class="lead" style="color: #daa520;font-weight: 500;">THE CITY OF THE LORD</p>
+                    <div class="hero-buttons">
+                       <!---<a href="#welcome-message" class="btn btn-primary btn-lg">Welcome</a> --->
+                        <a href="contact.html" class="btn btn-outline-white btn-lg">REACH US</a>
+                        <div class="mt-20">
+                            <a href="events.html" class="btn btn-default btn-lg btn-rounded">UPCOMING EVENTS</a>
+                        </div>
+                    </div>
+                    <div class="countdown-wrapper">
+                        <p class="text-uppercase small tracking-wide" style="font-size: 20px; opacity: 0.8; letter-spacing: 2px;">Next Service In</p>
+                        <div id="countdown" class="row">
+                            <div class="col-xs-3">
+                                <span id="days">0</span>
+                                <small>Days</small>
+                            </div>
+                            <div class="col-xs-3">
+                                <span id="hours">0</span>
+                                <small>Hours</small>
+                            </div>
+                            <div class="col-xs-3">
+                                <span id="minutes">0</span>
+                                <small>Mins</small>
+                            </div>
+                            <div class="col-xs-3">
+                                <span id="seconds">0</span>
+                                <small>Secs</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Access -->
+    <section class="section-padding bg-light">
+        <div class="container relative" style="margin-top: -80px; z-index: 10;">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-30">
+                    <div class="card fade-in">
+                        <div class="card-icon"><i class="fa fa-users" style="color: #daa520;"></i></div>
+                        <h3>New Here?</h3>
+                        <p>Discover what to expect and plan your first visit to CKGC.</p>
+                        <a href="contact.html" class="read-more" style="font-size: 20px;">Plan a Visit <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-30">
+                    <div class="card fade-in delay-100">
+                        <div class="card-icon"><i class="fa fa-calendar"style="color: #daa520;"></i></div>
+                        <h3>Upcoming Events</h3>
+                        <p>See what's happening this month and get involved.</p>
+                        <a href="events.html" class="read-more" style="font-size: 20px;">View Calendar <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-30">
+                    <div class="card fade-in delay-200">
+                        <div class="card-icon"><i class="fa fa-heart" style="color: #daa520;"></i></div>
+                        <h3>Give Online</h3>
+                        <p>Support the mission and vision of our church through giving.</p>
+                        <a href="give.html" class="read-more" style="font-size: 20px;">Give Now <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-------Welcome to our Season of Divine Manifestation------->
+     <!-- Blog / Inspiration Section -->
+    <section class="section-padding" style="background: #fafafa;" id="welcome-message">
+        <div class="container">
+
+
+            <div class="row">
+
+                <!-- Featured Article -->
+                <div class="col-md-7 mb-30">
+                    <div class="card fade-in" style="overflow:hidden; border-radius:16px;">
+
+                        <img src="./Assets/landscape-banner.jpeg" 
+                             alt="Featured Message" 
+                             class="img-responsive"
+                             style="width:100%; height:380px; object-fit:contain;">
+
+                        <div style="padding:35px;">
+
+                            <span style="
+                                background:#ad2622;
+                                color:white;
+                                padding:6px 14px;
+                                border-radius:30px;
+                                font-size:12px;
+                                letter-spacing:1px;
+                                text-transform:uppercase;
+                            ">
+                                Featured Reflection
+                            </span>
+
+                            <h2 class="font-serif" style="
+                                margin-top:20px;
+                                color:#222;
+                                line-height:1.4;
+                            ">
+                                Walking In Divine Manifestation Daily
+                            </h2>
+
+                            <p style="
+                                color:#666;
+                                font-size:16px;
+                                line-height:1.9;
+                                margin-top:20px;
+                            ">
+                               Walking in divine manifestation daily is about living with a conscious awareness 
+                               that your life is aligned with God’s purpose and power. It’s not just a spiritual idea, 
+                               it’s a lifestyle of intentionality, faith, and discipline.
+                               Welcome on board to your season of Divine Manifestation
+                            </p>
+
+                            <a href="events.html" class="read-more" style="margin-top:10px; display:inline-block; font-size:20px;">
+                                Join Us <i class="fa fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Articles -->
+                <div class="col-md-5">
+
+                    <div class="card fade-in delay-100" style="
+                        padding:25px;
+                        margin-bottom:25px;
+                        border-left:4px solid #daa520;
+                    ">
+
+                        <small style="
+                            text-transform:uppercase;
+                            letter-spacing:2px;
+                            color:#ad2622;
+                            font-weight:600;
+                        ">
+                         Wednesday Bible Study Service (6:00 PM)
+                        </small>
+
+                        <h3 class="font-serif" style="
+                            margin-top:12px;
+                            color:#222;
+                        ">
+                            True Friends & Fake Friends
+                        </h3>
+
+                        <p style="
+                            color:#777;
+                            line-height:1.8;
+                        ">
+                           Friends can be a wonderful blessing..
+                        </p>
+
+                         <a href="daily-devotion.html" class="btn btn-primary" style="margin-top: 15px;">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <div class="card fade-in delay-200" style="
+                        padding:25px;
+                        margin-bottom:25px;
+                        border-left:4px solid #ad2622;
+                    ">
+
+                        <small style="
+                            text-transform:uppercase;
+                            letter-spacing:2px;
+                            color:#daa520;
+                            font-weight:600;
+                        ">
+                            The Month Of June
+                        </small>
+
+                        <h3 class="font-serif" style="
+                            margin-top:12px;
+                            color:#222;
+                        ">
+                             Kindness is a Practical Manifestattion
+                        </h3>
+
+                        <p style="
+                            color:#777;
+                            line-height:1.8;
+                        ">
+                            Pst. Adewale Omjola
+                        </p>
+
+                    </div>
+
+                    <div class="card fade-in delay-300" style="
+                        padding:25px;
+                        background:#1d1d1d;
+                        color:white;
+                        border-radius:16px;
+                    ">
+
+                        <h3 class="font-serif" style="
+                            margin-top:0;
+                            color:#fff;
+                        ">
+                            Scripture Of The Year
+                        </h3>
+
+                        <p style="
+                            font-size:18px;
+                            line-height:1.9;
+                            color:#ddd;
+                            font-style:italic;
+                        ">
+                            “For the earnest expectational of the creature waitheth for the manifestation of the Sons of God.”
+                        </p>
+
+                        <span style="
+                            color:#daa520;
+                            font-weight:600;
+                            letter-spacing:1px;
+                        ">
+                            — Romans 8:19
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+                <!-- Community Experience Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+
+            <div class="section-header text-center">
+                <h2 class="font-serif" style="color: #daa520;">Experience The Atmosphere</h2>
+                <div class="divider"></div>
+                <p class="text-muted">
+                    A glimpse into moments of worship, fellowship, and transformation.
+                </p>
+                <br>
+            </div>
+
+            <div class="row">
+
+                <!-- Left Content -->
+                <div class="col-md-5 mb-30 fade-in">
+
+                    <div style="
+                        background: #1f1f1f;
+                        color: white;
+                        padding: 40px;
+                        border-radius: 18px;
+                        height: 100%;
+                    ">
+
+                        <span style="
+                            color: #daa520;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            font-size: 12px;
+                            font-weight: 600;
+                        ">
+                            Christ The King’s Glorious Church
+                        </span>
+
+                        <h2 class="font-serif" style="
+                            margin-top: 20px;
+                            line-height: 1.5;
+                            color: white;
+                        ">
+                            A Church Where Everyone Belongs
+                        </h2>
+
+                        <p style="
+                            color: #d4d4d4;
+                            line-height: 1.9;
+                            margin-top: 20px;
+                            font-size: 15px;
+                        ">
+                            At Christ The King’s Glorious Church, we are more than a congregation,
+                            we are a family united in worship, love, and purpose.
+                            Every gathering is an opportunity to encounter God and grow together.
+                        </p>
+
+                        <a href="about.html" class="btn btn-primary btn-lg" style="margin-top: 15px;">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Grid -->
+                <div class="col-md-7">
+
+                    <div class="row">
+
+                        <div class="col-sm-6 mb-30 fade-in delay-100">
+                            <div style="position: relative; overflow: hidden; border-radius: 18px;">
+                                <img src="./Assets/portrait-banner.JPG" 
+                                     class="img-responsive"
+                                     style="width:100%; height:260px; object-fit:cover;">
+
+                                <div style="
+                                    position:absolute;
+                                    bottom:0;
+                                    left:0;
+                                    right:0;
+                                    padding:20px;
+                                    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+                                    color:white;
+                                ">
+                                    <h4 class="font-serif">Sunday Worship</h4>
+                                    <p style="margin:0; color:#ddd;">
+                                        Powerful moments in God's presence.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-30 fade-in delay-200">
+                            <div style="position: relative; overflow: hidden; border-radius: 18px;">
+                                <img src="./Assets/landscape-banner.jpeg" 
+                                     class="img-responsive"
+                                     style="width:100%; height:260px; object-fit:cover;">
+
+                                <div style="
+                                    position:absolute;
+                                    bottom:0;
+                                    left:0;
+                                    right:0;
+                                    padding:20px;
+                                    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+                                    color:white;
+                                ">
+                                    <h4 class="font-serif">Bible Study</h4>
+                                    <p style="margin:0; color:#ddd;">
+                                        Growing deeper through the Word.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 fade-in delay-300">
+                            <div style="
+                                background:white;
+                                padding:35px;
+                                border-radius:18px;
+                                box-shadow:0 10px 30px rgba(0,0,0,0.06);
+                            ">
+
+                                <div class="row text-center">
+
+                                    <div class="col-xs-4">
+                                        <h2 style="
+                                            color:#ad2622;
+                                            font-weight:700;
+                                            margin-bottom:5px;
+                                        ">
+                                            100+
+                                        </h2>
+                                        <p class="text-muted">Members</p>
+                                    </div>
+
+                                    <div class="col-xs-4">
+                                        <h2 style="
+                                            color:#daa520;
+                                            font-weight:700;
+                                            margin-bottom:5px;
+                                        ">
+                                            5+
+                                        </h2>
+                                        <p class="text-muted">Departments</p>
+                                    </div>
+
+                                    <div class="col-xs-4">
+                                        <h2 style="
+                                            color:#ad2622;
+                                            font-weight:700;
+                                            margin-bottom:5px;
+                                        ">
+                                            23yrs
+                                        </h2>
+                                        <p class="text-muted">Of Ministry</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+            <!-----
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- Set 1: 8 Images
+                    <img src="./img-quotes/quote1.jpeg" alt="Sermon 1" class="marquee-item">
+                    <img src="https://picsum.photos/id/1016/600/400" alt="Sermon 2" class="marquee-item">
+                    <img src="https://picsum.photos/id/1018/600/400" alt="Sermon 3" class="marquee-item">
+                    <img src="https://picsum.photos/id/1019/600/400" alt="Sermon 4" class="marquee-item">
+                    <img src="https://picsum.photos/id/1020/600/400" alt="Sermon 5" class="marquee-item">
+                    <img src="https://picsum.photos/id/1021/600/400" alt="Sermon 6" class="marquee-item">
+                    <img src="https://picsum.photos/id/1022/600/400" alt="Sermon 7" class="marquee-item">
+                    <img src="https://picsum.photos/id/1023/600/400" alt="Sermon 8" class="marquee-item">
+                    
+                    <!-- Set 2: Duplicate 8 Images for infinite loop 
+                    <img src="./img-quotes/quote1.jpeg" alt="Sermon 1" class="marquee-item">
+                    <img src="https://picsum.photos/id/1016/600/400" alt="Sermon 2" class="marquee-item">
+                    <img src="https://picsum.photos/id/1018/600/400" alt="Sermon 3" class="marquee-item">
+                    <img src="https://picsum.photos/id/1019/600/400" alt="Sermon 4" class="marquee-item">
+                    <img src="https://picsum.photos/id/1020/600/400" alt="Sermon 5" class="marquee-item">
+                    <img src="https://picsum.photos/id/1021/600/400" alt="Sermon 6" class="marquee-item">
+                    <img src="https://picsum.photos/id/1022/600/400" alt="Sermon 7" class="marquee-item">
+                    <img src="https://picsum.photos/id/1023/600/400" alt="Sermon 8" class="marquee-item">
+                </div>
+            </div> --->
+            
+            <div class="text-center mt-30">
+                <a href="sermons.html" class="btn btn-default btn-lg btn-rounded">View Sermons</a>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Footer -->
+    <footer class="footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-30">
+                      <p>
+                        <img src="./Assets/ckgc logo.png" alt="" width="200px" height="200px">
+                    </p>
+                    <h3 class="font-serif text-white">CHRIST THE KING'S GLORIOUS CHURCH</h3>
+                    <p class="text-muted">THE CITY OF THE LORD</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/17ncp3UJPD/"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="https://wa.me/qr/27AWUNSNEN6XG1"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-30" style="font-size: 20px;">
+                    <h4 class="text-white">Quick Links</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="about.html">About Us</a></li>
+               <li><a href="daily-devotion.html">Bible Study</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="give.html">Give Online</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-30" style="font-size: 18px;">
+                    <h4 class="text-white">Service Times</h4>
+                    <ul class="list-unstyled text-muted">
+                        <li><strong>Sunday Worship</strong><br>9:30 AM & 11:00 AM</li><br>
+                        <li><strong>Midweek Bible Study</strong><br>Wednesday 6:00 PM - 7:30 PM</li> <br>
+                         <li><strong>First Day of the Month</strong><br>Wednesday 6:00 PM - 7:30 PM</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-30" style="font-size: 18px;">
+                    <h4 class="text-white">Contact Us</h4>
+                    <ul class="list-unstyled contact-info text-muted">
+                        <li><i class="fa fa-map-marker text-primary"></i> 3, Aiyelabowo Close, Off Otuba Bamidele st, Igando Ikotun Lagos</li><br>
+                        <li><i class="fa fa-phone text-primary"></i> (234) 903 577 2043</li><br>
+                           <li><i class="fa fa-phone text-primary"></i> (234) 086 434 0955</li><br>
+                        <li><i class="fa fa-envelope text-primary"></i> christthekingsgc@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 CHRIST THE KING'S GLORIOUS CHURCH. All rights reserved.</p>
+                <span>THE CITY OF THE LORD</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

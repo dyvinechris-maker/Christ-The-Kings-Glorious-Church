@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Grace Sanctuary</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* Christmas Special Styles */
+        .christmas-panel .panel-body {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #f0fbff 0%, #ffffff 100%);
+        }
+        
+        .santa-hat {
+            position: absolute;
+            top: -5px;
+            left: 20px;
+            width: 50px;
+            z-index: 5;
+            transform: rotate(-15deg);
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -20px;
+            color: #bde0fe;
+            font-size: 1.5em;
+            user-select: none;
+            pointer-events: none;
+            animation: snowfall linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-20px) translateX(0px) rotate(0deg);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(150px) translateX(20px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .santa-hat {
+                left: auto;
+                right: 15px;
+                top: 5px;
+                transform: rotate(15deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top transition">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                  <a class="navbar-brand font-serif" href="index.html">
+                    <span class="brand-icon"><img src="./Assets/ckgc logo.png" alt="ckgc" height="60px" width="70px"></span>CHRIST THE KING'S GLORIOUS CHURCH
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                <li><a href="daily-devotion.html">Bible Study</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li class="active"><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="give.html" class="btn btn-primary navbar-btn btn-sm text-white">Give</a></li>
+                    <li><button id="theme-toggle" class="btn btn-link navbar-btn"><i class="fa fa-moon-o"></i></button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header-section text-white text-center"
+     style="
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                    url('./pg-headers/event.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 100px 0;
+">
+        <div class="container">
+            <h1 class="font-serif">Upcoming Events</h1>
+            <p class="lead">Join us for fellowship and growth.</p>
+        </div>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <!-- Event 1 -->
+                    <div class="panel panel-default mb-30 shadow-sm">
+                        <div class="panel-body">
+                            <div class="row vertical-align">
+                                <div class="col-md-2 text-center hidden-xs">
+                                    <div class="date-box">
+                                        <span class="month">JUN</span>
+                                        <span class="day">14</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h3 class="mt-0">Worship & Hymnal Service</h3>
+                                    <ul class="list-inline text-muted small">
+                                        <li><i class="fa fa-clock-o"></i> 9:00 AM</li>
+                                        <li><i class="fa fa-map-marker"></i> Church Auditorium</li>
+                                    </ul>
+                                    <p>"Touched By His Kindness"</p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="panel panel-default mb-30 shadow-sm">
+                        <div class="panel-body">
+                            <div class="row vertical-align">
+                                <div class="col-md-2 text-center hidden-xs">
+                                    <div class="date-box">
+                                        <span class="month">JUN</span>
+                                        <span class="day">15-17</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h3 class="mt-0">Breakthrough Revival Service</h3>
+                                    <ul class="list-inline text-muted small">
+                                        <li><i class="fa fa-clock-o"></i> 6:00 PM</li>
+                                        <li><i class="fa fa-map-marker"></i> Church Auditorium</li>
+                                    </ul>
+                                    <p>Breaking Strongholds Through The Word Of God (2 Corinthians 10:4-5)</p>
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+
+                           <!-- Event 3 -->
+                    <div class="panel panel-default mb-30 shadow-sm">
+                        <div class="panel-body">
+                            <div class="row vertical-align" style="position: relative; z-index: 2;">
+                                <div class="col-md-2 text-center hidden-xs">
+                                    <div class="date-box">
+                                        <span class="month">JUN</span>
+                                        <span class="day">21</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h3 class="mt-0">Father's Day Celebration</h3>
+                                    <ul class="list-inline text-muted small">
+                                        <li><i class="fa fa-clock-o"></i> 9:00 AM</li>
+                                        <li><i class="fa fa-map-marker"></i> Church Auditorium</li>
+                                    </ul>
+                                    <p>The Gentle Strength Of A Father (Matthew 11:29)</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                               <!-- Event 4 -->
+                    <div class="panel panel-default mb-30 shadow-sm">
+                        <div class="panel-body">
+                            <div class="row vertical-align" style="position: relative; z-index: 2;">
+                                <div class="col-md-2 text-center hidden-xs">
+                                    <div class="date-box">
+                                        <span class="month">JUN</span>
+                                        <span class="day">28</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h3 class="mt-0">Family Sunday</h3>
+                                    <ul class="list-inline text-muted small">
+                                        <li><i class="fa fa-clock-o"></i> 9:00 AM</li>
+                                        <li><i class="fa fa-map-marker"></i> Church Auditorium</li>
+                                    </ul>
+                                    <p>Kindness Begins At Home (Ephesians 4:32)</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                               <!-- Event 5 -->
+                 <!----   <div class="panel panel-default mb-30 shadow-sm">
+                        <div class="panel-body">
+                            <div class="row vertical-align" style="position: relative; z-index: 2;">
+                                <div class="col-md-2 text-center hidden-xs">
+                                    <div class="date-box">
+                                        <span class="month">DEC</span>
+                                        <span class="day">21</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h3 class="mt-0">CHRISTMAS CAROL</h3>
+                                    <ul class="list-inline text-muted small">
+                                        <li><i class="fa fa-clock-o"></i> 6:00 PM</li>
+                                        <li><i class="fa fa-map-marker"></i> Church Auditorium</li>
+                                    </ul>
+                                    <p>Let's usher in the Christmas spirit with our Christmas Carol</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div> --->
+
+                               <!-- Event 6 -->
+                  <!-------  <div class="panel panel-default mb-30 shadow-sm">
+                        <div class="panel-body">
+                            <div class="row vertical-align" style="position: relative; z-index: 2;">
+                                <div class="col-md-2 text-center hidden-xs">
+                                    <div class="date-box">
+                                        <span class="month">DEC</span>
+                                        <span class="day">21</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h3 class="mt-0">CHRISTMAS CAROL</h3>
+                                    <ul class="list-inline text-muted small">
+                                        <li><i class="fa fa-clock-o"></i> 6:00 PM</li>
+                                        <li><i class="fa fa-map-marker"></i> Church Auditorium</li>
+                                    </ul>
+                                    <p>Let's usher in the Christmas spirit with our Christmas Carol</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div> ---->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+  <!---  <section class="section-padding bg-light">
+        <div class="container">
+            <h3 class="text-center font-serif mb-30">Recent Highlights</h3>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-15">
+                    <img src="https://picsum.photos/id/120/800/600" class="img-responsive img-rounded shadow-sm">
+                </div>
+                <div class="col-md-4 col-sm-6 mb-15">
+                    <img src="https://picsum.photos/id/129/800/600" class="img-responsive img-rounded shadow-sm">
+                </div>
+                <div class="col-md-4 col-sm-6 mb-15">
+                    <img src="https://picsum.photos/id/145/800/600" class="img-responsive img-rounded shadow-sm">
+                </div>
+            </div>
+        </div>
+    </section> --->
+
+    <footer class="footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-30">
+                      <p>
+                        <img src="./Assets/ckgc logo.png" alt="" width="200px" height="200px">
+                    </p>
+                    <h3 class="font-serif text-white">CHRIST THE KING'S GLORIOUS CHURCH</h3>
+                    <p class="text-muted">THE CITY OF THE LORD</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/17ncp3UJPD/"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="https://wa.me/qr/27AWUNSNEN6XG1"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-30" style="font-size: 18px;">
+                    <h4 class="text-white">Quick Links</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="daily-devotion.html">Bible Study</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="give.html">Give Online</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-30" style="font-size: 18px;">
+                    <h4 class="text-white">Service Times</h4>
+                    <ul class="list-unstyled text-muted">
+                        <li><strong>Sunday Worship</strong><br>9:30 AM - 11:00 AM</li><br>
+                        <li><strong>Midweek Bible Study</strong><br>Wednesday 6:00 PM - 7:30 PM</li> <br>
+                            <li><strong>First Day of the Month</strong><br>Wednesday 6:00 PM - 7:30 PM</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-30" style="font-size: 18px;">
+                    <h4 class="text-white">Contact Us</h4>
+                    <ul class="list-unstyled contact-info text-muted">
+                        <li><i class="fa fa-map-marker text-primary"></i> 3, Aiyelabowo Close, Off Otuba Bamidele st, Igando Ikotun Lagos</li><br>
+                        <li><i class="fa fa-phone text-primary"></i> (234) 903 577 2043</li><br>
+                           <li><i class="fa fa-phone text-primary"></i> (234) 086 434 0955</li><br>
+                        <li><i class="fa fa-envelope text-primary"></i> christthekingsgc@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 CHRIST THE KING'S GLORIOUS CHURCH. All rights reserved.</p>
+                <span>THE CITY OF THE LORD</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
