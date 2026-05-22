@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6, .font-serif {
    Mobile Responsive Styles
 ========================= */
 @media (max-width: 768px) {
-    
+
     .navbar-default {
         padding: 8px 15px;
     }
@@ -295,7 +295,7 @@ body.dark-mode .card-icon { background: #333; }
 
 @media (max-width: 768px) {
     .vertical-align { display: block; }
-    .hero-content h1 { font-size: 2.5em; }
+    .hero-content h1 { font-size: 2.5em; margin-top: 100px; }
     .hero-section { height: auto; padding-bottom: 50px; }
 }
 
