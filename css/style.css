@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 .mb-30 { margin-bottom: 30px; }
 .mb-50 { margin-bottom: 50px; }
 .p-20 { padding: 20px; }
-.p-30 { padding: 30px; }
+ .p-30 { padding: 30px; }
 .section-padding { padding: 60px 0; }
 .h-100 { height: 100%; }
 .w-100 { width: 100%; }
@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6, .font-serif {
    Mobile Responsive Styles
 ========================= */
 @media (max-width: 768px) {
-
+    
     .navbar-default {
         padding: 8px 15px;
     }
